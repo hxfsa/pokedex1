@@ -5,5 +5,7 @@ function App() {
     <div>
       <PokemonCard />
     </div>
-  )
+  );
 }
+
+export default App;
