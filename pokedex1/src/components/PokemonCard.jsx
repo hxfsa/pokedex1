@@ -1,15 +1,13 @@
 function PokemonCard() {
+  const pokemon = pokemonList[0];
+  const {name, imgSrc} = pokemon;
+
   return (
     <figure>
-      <img
-        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
-        alt="photo de bulbizarre"
-      />
-      <figcaption>bulbasaur</figcaption>
+       {imgSrc ? <img src = {imgSrc}/> : <p> ???</p>}
+      <figcaption>{name}</figcaption>
     </figure>
   );
-
-  let pokemon = pokemonList[0];
 }
 
 const pokemonList = [
@@ -23,4 +21,6 @@ const pokemonList = [
   },
 ];
 
+
 export default PokemonCard;
+
