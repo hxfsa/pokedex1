@@ -31,22 +31,25 @@ const pokemonList = [
 
 function App() {
   const [pokemonIndex, setPokemonIndex] = useState(0);
-  const decrementPokemon = () => {
-    if (pokemonIndex > 0) {
-      setPokemonIndex(pokemonIndex-1)
-
-    }
+  const handleClick = (index) => {
+    setPokemonIndex(index)
   }
-  const incrementPokemon = () => {
-    if (pokemonIndex < 4) {
-      setPokemonIndex(pokemonIndex+1)
+  // const decrementPokemon = () => {
+  //   if (pokemonIndex > 0) {
+  //     setPokemonIndex(pokemonIndex-1)
 
-    }
-  }
+  //   }
+  // }
+  // const incrementPokemon = () => {
+  //   if (pokemonIndex < 4) {
+  //     setPokemonIndex(pokemonIndex+1)
+
+  //   }
+  // }
   return (
 
     <>
-    <NavBar decrementPokemon={decrementPokemon} incrementPokemon={incrementPokemon} pokemonIndex={pokemonIndex} pokemonList={pokemonList}/>
+    <NavBar  pokemonList={pokemonList} handleClick={handleClick}/>
     <PokemonCard pokemon={pokemonList[pokemonIndex]}/>
     </>
   //     <div style={{display:'flex'}}>

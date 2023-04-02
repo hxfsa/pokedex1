@@ -1,11 +1,10 @@
 import App from "../App";
 
 function NavBar(props) {
-   const { decrementPokemon, incrementPokemon, pokemonIndex, pokemonList } = props;
+   const { pokemonList, handleClick } = props;
     return (
         <div style={{display:'flex'}}>
-   {pokemonIndex > 0 ?  <button onClick={decrementPokemon}>Précédent</button> : "" }
-      {pokemonIndex < pokemonList.length -1 ? <button onClick={incrementPokemon}>Suivant</button> : "" }
+          {pokemonList.map((pokemon, index) => <button key={index} onClick={() => {handleClick(index)}}>{pokemon.name}</button>)}
     </div>
       );
 }
