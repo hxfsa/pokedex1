@@ -2,7 +2,7 @@ import App from "../App";
 
 function NavBar(props) {
    const { decrementPokemon, incrementPokemon, pokemonIndex, pokemonList } = props;
-   if(pokemonIndex === [3]) {
+   if(pokemonIndex == [3]) {
     alert("pika pikachu !!!")
    }
     return (
